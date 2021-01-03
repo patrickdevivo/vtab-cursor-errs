@@ -1,0 +1,3 @@
+```
+go test -v -tags=sqlite_vtable ./...
+```
