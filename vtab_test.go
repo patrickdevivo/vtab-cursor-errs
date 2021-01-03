@@ -31,7 +31,10 @@ func TestVTab(t *testing.T) {
 
 	for rows.Next() {
 		var val int
-		rows.Scan(&val)
+		err := rows.Scan(&val)
+		if err != nil {
+			t.Fatal(err)
+		}
 		fmt.Println(val)
 	}
 
